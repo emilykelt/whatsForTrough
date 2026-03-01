@@ -70,16 +70,21 @@ function ExtrasBlock({ service }: { service: MealService }) {
 
 function MealBlock({
   title,
+  times,
   service,
   showExtras = false,
 }: {
   title: string;
+  times?: string;
   service: MealService;
   showExtras?: boolean;
 }) {
   return (
     <section>
-      <h2 className="font-display text-xl text-navy mb-2">{title}</h2>
+      <h2 className="font-display text-xl text-navy mb-0.5">{title}</h2>
+      {times && (
+        <p className="text-[11px] text-stone-400 font-sans mb-2">{times}</p>
+      )}
       <div
         className="bg-white border-x border-b border-stone-200 px-4 overflow-hidden shadow-sm"
         style={{ borderTop: "3px solid #1c2d58" }}
@@ -128,6 +133,10 @@ export default async function Home({
 
   const isWeekend =
     selectedDate.getDay() === 0 || selectedDate.getDay() === 6;
+
+  // Sunday dinner is 5.30–6.30pm; every other day is 5.45–6.45pm.
+  const dinnerTimes =
+    selectedDate.getDay() === 0 ? "5.30pm – 6.30pm" : "5.45pm – 6.45pm";
 
   return (
     <main className="min-h-screen">
@@ -197,9 +206,10 @@ export default async function Home({
             {isWeekend ? (
               <>
                 <section>
-                  <h2 className="font-display text-xl text-navy mb-2">
+                  <h2 className="font-display text-xl text-navy mb-0.5">
                     Brunch
                   </h2>
+                  <p className="text-[11px] text-stone-400 font-sans mb-2">10am – 1.15pm</p>
                   <div
                     className="bg-white border-x border-b border-stone-200 px-4 py-4 shadow-sm"
                     style={{ borderTop: "3px solid #1c2d58" }}
@@ -211,6 +221,7 @@ export default async function Home({
                 </section>
                 <MealBlock
                   title="Dinner"
+                  times={dinnerTimes}
                   service={menuResult.menu.dinner}
                   showExtras
                 />
@@ -218,10 +229,15 @@ export default async function Home({
             ) : (
               <>
                 {menuResult.menu.lunch && (
-                  <MealBlock title="Lunch" service={menuResult.menu.lunch} />
+                  <MealBlock
+                    title="Lunch"
+                    times="11.45am – 1.30pm"
+                    service={menuResult.menu.lunch}
+                  />
                 )}
                 <MealBlock
                   title="Dinner"
+                  times={dinnerTimes}
                   service={menuResult.menu.dinner}
                   showExtras
                 />
