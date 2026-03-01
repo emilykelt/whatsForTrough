@@ -45,7 +45,33 @@ export interface MenuResult {
   menu: DayMenu;
 }
 
-const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
+const MS_PER_DAY  =     24 * 60 * 60 * 1000;
+const MS_PER_WEEK = 7 * MS_PER_DAY;
+
+/** Every calendar date that is in-term, in chronological order. */
+function getAllTermDates(): Date[] {
+  const dates: Date[] = [];
+  for (const { start } of TERM_WEEKS) {
+    for (let i = 0; i < 7; i++) {
+      dates.push(new Date(start.getTime() + i * MS_PER_DAY));
+    }
+  }
+  return dates;
+}
+
+/**
+ * Returns the next (+1) or previous (−1) in-term calendar date relative to
+ * the given date. Wraps: the day after the last term day is the first term day,
+ * and vice versa. If the given date is outside term, returns the first term day.
+ */
+export function getAdjacentTermDate(date: Date, dir: 1 | -1): Date {
+  const termDates = getAllTermDates();
+  const d = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const idx = termDates.findIndex((td) => td.getTime() === d.getTime());
+  if (idx === -1) return termDates[0]; // outside term → wrap to start
+  const newIdx = (idx + dir + termDates.length) % termDates.length;
+  return termDates[newIdx];
+}
 
 /**
  * Returns the trough menu for the given date, or null outside of term.

@@ -2,25 +2,27 @@
 export const dynamic = "force-dynamic";
 
 import Image from "next/image";
-import { getMenu, type MealService } from "@/lib/getMenu";
-import menuData from "@/data/menuData.json";
+import { getMenu, getAdjacentTermDate, type MealService } from "@/lib/getMenu";
 import { DayScroller } from "./DayScroller";
 
-// ── types ────────────────────────────────────────────────────────────────────
-
-// Date.getDay() order (0 = Sunday)
-const ALL_DAYS = [
-  "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday",
-] as const;
-type DayName = (typeof ALL_DAYS)[number];
-
-type DayMenu = {
-  lunch?: MealService;
-  brunch?: MealService;
-  dinner: MealService;
-};
-
 // ── helpers ─────────────────────────────────────────────────────────────────
+
+/** Format a Date as YYYY-MM-DD using local time (avoids UTC shift). */
+function toISO(date: Date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+/** Parse a YYYY-MM-DD string into a local midnight Date, or return null. */
+function parseISO(str: string): Date | null {
+  const parts = str.split("-").map(Number);
+  if (parts.length !== 3 || parts.some(isNaN)) return null;
+  return new Date(parts[0], parts[1] - 1, parts[2]);
+}
+
+// ── ui components ────────────────────────────────────────────────────────────
 
 function Dish({ label, name }: { label: string; name: string }) {
   return (
@@ -36,7 +38,10 @@ function Dish({ label, name }: { label: string; name: string }) {
 function ExtrasBlock({ service }: { service: MealService }) {
   if (!service.pudding && !service.sides?.length) return null;
   return (
-    <div className="mt-3 bg-white border-x border-b border-stone-200 px-4 overflow-hidden shadow-sm" style={{ borderTop: "3px solid #1c2d58" }}>
+    <div
+      className="mt-3 bg-white border-x border-b border-stone-200 px-4 overflow-hidden shadow-sm"
+      style={{ borderTop: "3px solid #1c2d58" }}
+    >
       {service.pudding && (
         <div className="py-3 border-b border-stone-100 last:border-0">
           <p className="text-[10px] font-semibold uppercase tracking-widest text-pem-blue mb-0.5 font-sans">
@@ -74,10 +79,11 @@ function MealBlock({
 }) {
   return (
     <section>
-      <h2 className="font-display text-xl text-navy mb-2">
-        {title}
-      </h2>
-      <div className="bg-white border-x border-b border-stone-200 px-4 overflow-hidden shadow-sm" style={{ borderTop: "3px solid #1c2d58" }}>
+      <h2 className="font-display text-xl text-navy mb-2">{title}</h2>
+      <div
+        className="bg-white border-x border-b border-stone-200 px-4 overflow-hidden shadow-sm"
+        style={{ borderTop: "3px solid #1c2d58" }}
+      >
         <Dish label="Student Special" name={service.studentSpecial} />
         <Dish label="Alternative" name={service.alternativeDish} />
         <Dish label="Allergen Friendly" name={service.allergenFriendly} />
@@ -92,49 +98,42 @@ function MealBlock({
 export default async function Home({
   searchParams,
 }: {
-  searchParams: Promise<{ day?: string }>;
+  searchParams: Promise<{ date?: string }>;
 }) {
-  const { day: dayParam } = await searchParams;
+  const { date: dateParam } = await searchParams;
 
   const now = new Date();
+  const todayISO = toISO(now);
 
-  // Always derive the week number from today's real date.
-  const todayResult = getMenu(now);
-  const todayDayName = ALL_DAYS[now.getDay()];
+  // Resolve which date to display.
+  const selectedDate =
+    dateParam ? (parseISO(dateParam) ?? now) : now;
 
-  // Validate the requested day; fall back to today.
-  const requestedDay: DayName =
-    dayParam && (ALL_DAYS as readonly string[]).includes(dayParam)
-      ? (dayParam as DayName)
-      : todayDayName;
+  // Get the menu for the selected date (null if outside term).
+  const menuResult = getMenu(selectedDate);
 
-  const isToday = requestedDay === todayDayName;
+  // Compute prev / next in-term dates for the arrows.
+  // Use the sentinel "today" so the URL stays clean when landing on today.
+  const prevDate   = getAdjacentTermDate(selectedDate, -1);
+  const nextDate   = getAdjacentTermDate(selectedDate,  1);
+  const prevParam  = toISO(prevDate) === todayISO ? "today" : toISO(prevDate);
+  const nextParam  = toISO(nextDate) === todayISO ? "today" : toISO(nextDate);
 
-  // Look up the chosen day's menu from the current term week.
-  let displayMenu: DayMenu | null = null;
-  if (todayResult) {
-    const weekKey = `week${todayResult.week}` as keyof typeof menuData;
-    displayMenu = menuData[weekKey][
-      requestedDay as keyof (typeof menuData)[typeof weekKey]
-    ] as unknown as DayMenu;
-  }
+  // Format for the centred date display, e.g. "Sunday 1 March".
+  const displayDate = selectedDate.toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
 
-  const isWeekend = requestedDay === "saturday" || requestedDay === "sunday";
-
-  // Header date string: full date for today, just the day name otherwise.
-  const dateString = isToday
-    ? now.toLocaleDateString("en-GB", {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-      })
-    : requestedDay.charAt(0).toUpperCase() + requestedDay.slice(1);
+  const isWeekend =
+    selectedDate.getDay() === 0 || selectedDate.getDay() === 6;
 
   return (
     <main className="min-h-screen">
       {/* ── Header ──────────────────────────────────────────────────── */}
       <div className="bg-navy relative overflow-hidden">
-        {/* Pembroke illustration — positioned right, fades into navy */}
+        {/* Pembroke illustration */}
         <div className="absolute inset-y-0 right-0 w-3/4 pointer-events-none">
           <Image
             src="/pem-illustration.jpg"
@@ -144,10 +143,9 @@ export default async function Home({
             priority
           />
         </div>
-        {/* Gradient: solid navy left → transparent right */}
         <div className="absolute inset-0 bg-gradient-to-r from-navy from-30% via-navy/85 to-navy/40 pointer-events-none" />
 
-        <div className="relative px-5 pt-12 pb-5 max-w-lg mx-auto">
+        <div className="relative px-5 pt-12 pb-6 max-w-lg mx-auto">
           <h1 className="font-display text-5xl text-white leading-none">
             trough
           </h1>
@@ -155,35 +153,38 @@ export default async function Home({
             Pembroke College, Cambridge
           </p>
 
-          <div className="flex items-center gap-2 mt-4 flex-wrap">
-            <span className="text-white/80 text-[13px] font-medium">
-              {dateString}
-            </span>
-            {todayResult && (
-              <span className="text-[11px] font-semibold uppercase tracking-wider bg-white/10 text-white/60 px-2.5 py-0.5 rounded-full">
-                Week {todayResult.week}
-              </span>
-            )}
-          </div>
-
-          {/* Day scroller — only shown during term */}
-          {todayResult && (
-            <div className="mt-4">
-              <DayScroller
-                activeDay={requestedDay}
-                todayDay={todayDayName}
-              />
-            </div>
+          {/* Day navigation — only shown during term */}
+          {menuResult ? (
+            <DayScroller
+              displayDate={displayDate}
+              prevParam={prevParam}
+              nextParam={nextParam}
+              menuWeek={menuResult.week}
+            />
+          ) : (
+            /* Outside term: just show today's date, no arrows */
+            <p className="text-white/70 text-[14px] mt-5 font-medium">
+              {now.toLocaleDateString("en-GB", {
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+              })}
+            </p>
           )}
         </div>
       </div>
 
       <div className="px-4 py-6 pb-10 max-w-lg mx-auto">
         {/* ── No menu ─────────────────────────────────────────────── */}
-        {!todayResult && (
-          <div className="bg-white rounded-2xl border border-stone-200 shadow-sm px-5 py-10 text-center">
+        {!menuResult && (
+          <div
+            className="bg-white border-stone-200 shadow-sm px-5 py-10 text-center border"
+            style={{ borderTop: "3px solid #1c2d58" }}
+          >
             <p className="text-3xl mb-3">🍽️</p>
-            <p className="font-semibold text-stone-700 font-sans">No menu today</p>
+            <p className="font-semibold text-stone-700 font-sans">
+              No menu today
+            </p>
             <p className="text-[13px] text-stone-400 mt-1 font-sans">
               The trough is closed outside of term.
             </p>
@@ -191,40 +192,39 @@ export default async function Home({
         )}
 
         {/* ── Menu ────────────────────────────────────────────────── */}
-        {todayResult && displayMenu && (
+        {menuResult && (
           <div className="space-y-5">
             {isWeekend ? (
-              /* Weekend: standard brunch note, then full dinner service */
               <>
                 <section>
                   <h2 className="font-display text-xl text-navy mb-2">
                     Brunch
                   </h2>
-                  <div className="bg-white border-x border-b border-stone-200 px-4 py-4 shadow-sm" style={{ borderTop: "3px solid #1c2d58" }}>
-                    <p className="text-[15px] text-stone-400 italic">Standard brunch menu</p>
+                  <div
+                    className="bg-white border-x border-b border-stone-200 px-4 py-4 shadow-sm"
+                    style={{ borderTop: "3px solid #1c2d58" }}
+                  >
+                    <p className="text-[15px] text-stone-400 italic">
+                      Standard brunch menu
+                    </p>
                   </div>
                 </section>
-                {displayMenu.dinner && (
-                  <MealBlock
-                    title="Dinner"
-                    service={displayMenu.dinner}
-                    showExtras
-                  />
-                )}
+                <MealBlock
+                  title="Dinner"
+                  service={menuResult.menu.dinner}
+                  showExtras
+                />
               </>
             ) : (
-              /* Weekday: lunch then dinner */
               <>
-                {displayMenu.lunch && (
-                  <MealBlock title="Lunch" service={displayMenu.lunch} />
+                {menuResult.menu.lunch && (
+                  <MealBlock title="Lunch" service={menuResult.menu.lunch} />
                 )}
-                {displayMenu.dinner && (
-                  <MealBlock
-                    title="Dinner"
-                    service={displayMenu.dinner}
-                    showExtras
-                  />
-                )}
+                <MealBlock
+                  title="Dinner"
+                  service={menuResult.menu.dinner}
+                  showExtras
+                />
               </>
             )}
           </div>
