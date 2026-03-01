@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --color-navy: #1c2d58;
+  --color-pem-blue: #4d7fad;
+  --color-pem-blue-light: #d5e8f5;
+  --color-pem-cream: #f4f1ec;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f4f1ec;
+  /* Prevent iOS font size bump on orientation change */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* P22 Civilite display font for headings */
+.font-display {
+  font-family: "p22-civilite-no14", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Hide scrollbar while keeping scroll functionality (day scroller) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
