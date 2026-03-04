@@ -248,17 +248,29 @@ export default async function Home({
       </div>
 
       {/* ── Footer ──────────────────────────────────────────────────── */}
-      <footer className="pb-8 text-center text-[11px] text-stone-400 font-sans">
-        Menu data from{" "}
-        <a
-          href="https://www.pem.cam.ac.uk/catering"
-          className="underline underline-offset-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Pembroke College Catering
-        </a>
-        . Not an official Pembroke service.
+      <footer className="pb-8 text-center text-[11px] text-stone-400 font-sans space-y-1">
+        <p>
+          <a
+            href="https://www.pem.cam.ac.uk/college/catering/information-students/formal-hall-menu"
+            className="underline underline-offset-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Formal Hall menus →
+          </a>
+        </p>
+        <p>
+          Menu data from{" "}
+          <a
+            href="https://www.pem.cam.ac.uk/catering"
+            className="underline underline-offset-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pembroke College Catering
+          </a>
+          . Not an official Pembroke service.
+        </p>
       </footer>
     </main>
   );

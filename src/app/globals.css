@@ -9,7 +9,9 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "faustina", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: #f4f1ec;
   /* Prevent iOS font size bump on orientation change */
   -webkit-text-size-adjust: 100%;
