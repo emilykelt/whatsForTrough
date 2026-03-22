@@ -1,4 +1,5 @@
 import menuData from "@/data/menuData.json";
+import formalHallData from "@/data/formalHallData.json";
 
 // ---------------------------------------------------------------------------
 // Term week schedule — Lent 2026
@@ -77,6 +78,84 @@ export function getAdjacentTermDate(date: Date, dir: 1 | -1): Date {
  * Returns the trough menu for the given date, or null outside of term.
  * Strips the time component so it is safe to call at any hour of the day.
  */
+// ---------------------------------------------------------------------------
+// Café '84 menu — Mon–Fri only, 9 am – 4.30 pm
+// ---------------------------------------------------------------------------
+
+const CAFE_DAILY = [
+  "Cookie of the day",
+  "Loaf of the day",
+  "Cake of the day",
+  "Small treat / muffin of the day",
+  "Salad or soup of the day",
+];
+
+const CAFE_HOT: Record<1 | 2 | 3, Record<string, [string, string]>> = {
+  1: {
+    monday:    ["Ham and cheese croissant", "Cheese and tomato croissant"],
+    tuesday:   ["Chicken, peppers and cheese quesadilla", "Refried beans, peppers and onion quesadilla"],
+    wednesday: ["Spinach and Cheddar swirl", "Cheese and bacon swirl"],
+    thursday:  ["Trout, tomato and rocket bagel", "Smoked tofu, tomatoes and rocket bagel"],
+    friday:    ["Chicken and bacon toastie", "Tomato, basil and Cheddar toastie"],
+  },
+  2: {
+    monday:    ["Sausage roll", "Vegan sausage roll"],
+    tuesday:   ["Parma ham, mozzarella and tomato panini", "Greens, tabasco and Cheddar panini"],
+    wednesday: ["Cheese and chive scone", "Bacon and cheese scone"],
+    thursday:  ["Chicken Caesar wrap", "Hummus, roasted red pepper and sun-dried tomato wrap"],
+    friday:    ["Chicken, chorizo and peppers quesadilla", "Sweet potato, chili, goat cheese and spring onion quesadilla"],
+  },
+  3: {
+    monday:    ["Tomato Spanish puff pastry", "Tuna and tomato Spanish puff pastry"],
+    tuesday:   ["Pastrami, gherkins, mustard and cheese bagel", "Grilled halloumi, spinach and tomato bagel"],
+    wednesday: ["Pulled pork, mixed peppers and cheese quesadilla", "Spicy mixed peppers and courgette quesadilla"],
+    thursday:  ["BBQ beef brisket, peppers and cheese panini", "Tuna and sweetcorn melt panini"],
+    friday:    ["Ham and cheese toastie", "Onion and Cheddar toastie"],
+  },
+};
+
+export interface CafeMenu {
+  dailyOptions: string[];
+  hotFood: [string, string];
+}
+
+export function getCafeMenu(date: Date): CafeMenu | null {
+  const result = getMenu(date);
+  if (!result) return null;
+  // Café is only open Mon–Fri
+  const dayIdx = date.getDay();
+  if (dayIdx === 0 || dayIdx === 6) return null;
+  const hot = CAFE_HOT[result.week][result.day];
+  if (!hot) return null;
+  return { dailyOptions: CAFE_DAILY, hotFood: hot };
+}
+
+// ---------------------------------------------------------------------------
+// Formal Hall menu — date-keyed, not on a rotation
+// ---------------------------------------------------------------------------
+
+export interface FormalHallCourse {
+  dish?: string;
+  description?: string;
+  vegDish?: string;
+  vegDescription?: string;
+}
+
+export interface FormalHallMenu {
+  event: string;
+  courses: FormalHallCourse[];
+}
+
+export function getFormalHall(date: Date): FormalHallMenu | null {
+  const d = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  const key = `${y}-${m}-${day}`;
+  const entry = (formalHallData as Record<string, FormalHallMenu>)[key];
+  return entry ?? null;
+}
+
 export function getMenu(date: Date = new Date()): MenuResult | null {
   // Normalise to midnight local time — comparisons are date-only.
   const today = new Date(date.getFullYear(), date.getMonth(), date.getDate());

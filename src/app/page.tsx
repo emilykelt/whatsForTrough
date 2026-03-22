@@ -2,7 +2,7 @@
 export const dynamic = "force-dynamic";
 
 import Image from "next/image";
-import { getMenu, getAdjacentTermDate, type MealService } from "@/lib/getMenu";
+import { getMenu, getAdjacentTermDate, getCafeMenu, getFormalHall, type MealService, type FormalHallMenu } from "@/lib/getMenu";
 import { DayScroller } from "./DayScroller";
 
 // ── helpers ─────────────────────────────────────────────────────────────────
@@ -138,6 +138,12 @@ export default async function Home({
   const dinnerTimes =
     selectedDate.getDay() === 0 ? "5.30pm – 6.30pm" : "5.45pm – 6.45pm";
 
+  // Café '84 — weekdays only.
+  const cafeMenu = getCafeMenu(selectedDate);
+
+  // Formal Hall — date-specific, not on a rotation.
+  const formalHall = getFormalHall(selectedDate);
+
   return (
     <main className="min-h-screen">
       {/* ── Header ──────────────────────────────────────────────────── */}
@@ -246,6 +252,100 @@ export default async function Home({
           </div>
         )}
       </div>
+
+      {/* ── Café '84 ─────────────────────────────────────────────────── */}
+      {cafeMenu && (
+        <div className="px-4 pb-10 max-w-lg mx-auto">
+          <section>
+            <h2 className="font-display text-xl text-navy mb-0.5">
+              Café &lsquo;84
+            </h2>
+            <p className="text-[11px] text-stone-400 font-sans mb-2">
+              9am – 4.30pm · Monday to Friday
+            </p>
+
+            <div
+              className="bg-white border-x border-b border-stone-200 px-4 overflow-hidden shadow-sm"
+              style={{ borderTop: "3px solid #1c2d58" }}
+            >
+              <div className="py-3 border-b border-stone-100">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-pem-blue mb-1.5 font-sans">
+                  Hot food
+                </p>
+                <p className="text-[15px] leading-snug text-stone-800">
+                  {cafeMenu.hotFood[0]}
+                </p>
+                <p className="text-[15px] leading-snug text-stone-800 mt-0.5">
+                  {cafeMenu.hotFood[1]}
+                </p>
+              </div>
+              <div className="py-3">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-pem-blue mb-1.5 font-sans">
+                  Daily options
+                </p>
+                <ul className="list-disc list-inside space-y-0.5">
+                  {cafeMenu.dailyOptions.map((item) => (
+                    <li key={item} className="text-[14px] text-stone-700">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      )}
+
+      {/* ── Formal Hall ──────────────────────────────────────────────── */}
+      {formalHall && (
+        <div className="px-4 pb-10 max-w-lg mx-auto">
+          <section>
+            <h2 className="font-display text-xl text-navy mb-0.5">
+              {formalHall.event}
+            </h2>
+
+            <div
+              className="bg-white border-x border-b border-stone-200 px-4 overflow-hidden shadow-sm"
+              style={{ borderTop: "3px solid #1c2d58" }}
+            >
+              {formalHall.courses.map((course, i) => (
+                <div
+                  key={i}
+                  className={`py-3 ${i < formalHall.courses.length - 1 ? "border-b-2 border-pem-blue/20" : ""}`}
+                >
+                  {course.dish && (
+                    <div>
+                      <p className="text-[15px] leading-snug text-stone-800">
+                        {course.dish}
+                      </p>
+                      {course.description && (
+                        <p className="text-[13px] text-stone-400 mt-0.5">
+                          {course.description}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                  {course.vegDish && (
+                    <div className={course.dish ? "mt-2" : ""}>
+                      <p className="text-[15px] leading-snug text-stone-800">
+                        <span className="text-[10px] font-semibold uppercase tracking-widest text-pem-blue font-sans mr-1.5">
+                          V
+                        </span>
+                        {course.vegDish}
+                      </p>
+                      {course.vegDescription && (
+                        <p className="text-[13px] text-stone-400 mt-0.5 ml-[18px]">
+                          {course.vegDescription}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      )}
 
       {/* ── Footer ──────────────────────────────────────────────────── */}
       <footer className="pb-8 text-center text-[11px] text-stone-400 font-sans space-y-1">
