@@ -201,7 +201,7 @@ export default async function Home({
               No menu today
             </p>
             <p className="text-[13px] text-stone-400 mt-1 font-sans">
-              The trough is closed outside of term.
+              Trough menus aren&apos;t uploaded during the break.
             </p>
           </div>
         )}
