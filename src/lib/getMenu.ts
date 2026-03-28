@@ -156,9 +156,37 @@ export function getFormalHall(date: Date): FormalHallMenu | null {
   return entry ?? null;
 }
 
+// ---------------------------------------------------------------------------
+// April Fools menu — 1 Apr only
+// ---------------------------------------------------------------------------
+const APRIL_FOOLS_MENU: DayMenu = {
+  lunch: {
+    studentSpecial: "Avocado sushi",
+    alternativeDish: "Egesta stuffed peppers",
+    allergenFriendly: "Deconstructed water",
+  },
+  dinner: {
+    studentSpecial: "Pasta with ragù steak",
+    alternativeDish: "Pembroke mystery meat surprise",
+    allergenFriendly: "Locally sourced toast water",
+    pudding: "Matt's fingers",
+    sides: ["Hard boiled eggs", "Triple cooked chips", "Free-range ice cubes", "Artisanal air"],
+  },
+};
+
 export function getMenu(date: Date = new Date()): MenuResult | null {
   // Normalise to midnight local time — comparisons are date-only.
   const today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+  // April Fools — serve the joke menu on 1 April.
+  if (today.getMonth() === 3 && today.getDate() === 1) {
+    return {
+      week: 1,
+      day: DAY_NAMES[today.getDay()],
+      isWeekend: false,
+      menu: APRIL_FOOLS_MENU,
+    };
+  }
 
   const termWeek = TERM_WEEKS.find(({ start }) => {
     const end = new Date(start.getTime() + MS_PER_WEEK);
