@@ -369,7 +369,16 @@ export default async function Home({
           >
             Pembroke College Catering
           </a>
-          . Not an official Pembroke service.
+          . Not an official Pembroke service. Menu information may be incorrect.
+        </p>
+        <p>
+          Made by{" "}
+          <a
+            href="mailto:emk50@cam.ac.uk"
+            className="underline underline-offset-2"
+          >
+            emk50@cam.ac.uk
+          </a>
         </p>
       </footer>
     </main>
