@@ -18,6 +18,7 @@ const TERM_WEEKS: { week: 1 | 2 | 3; start: Date }[] = [
   { week: 2, start: new Date(2026, 2,  9) }, //  9 Mar (Mon)
   { week: 3, start: new Date(2026, 2, 16) }, // 16 Mar (Mon)
   { week: 3, start: new Date(2026, 3,  6) }, //  6 Apr (Mon)
+  { week: 1, start: new Date(2026, 3, 13) }, // 13 Apr (Mon)
 ];
 
 const DAY_NAMES = [
