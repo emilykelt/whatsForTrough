@@ -8,6 +8,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 export const metadata: Metadata = {
   title: "trough — Pembroke College",
   description: "Today's servery menu at Pembroke College, Cambridge.",
+  manifest: "/site.webmanifest",
   // PWA / home screen
   appleWebApp: {
     capable: true,
