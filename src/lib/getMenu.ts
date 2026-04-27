@@ -19,6 +19,9 @@ const TERM_WEEKS: { week: 1 | 2 | 3; start: Date }[] = [
   { week: 3, start: new Date(2026, 2, 16) }, // 16 Mar (Mon)
   { week: 3, start: new Date(2026, 3,  6) }, //  6 Apr (Mon)
   { week: 1, start: new Date(2026, 3, 13) }, // 13 Apr (Mon)
+  { week: 1, start: new Date(2026, 3, 27) }, // 27 Apr (Mon) — Easter term
+  { week: 1, start: new Date(2026, 4, 18) }, // 18 May (Mon)
+  { week: 1, start: new Date(2026, 5,  8) }, //  8 Jun (Mon)
 ];
 
 const DAY_NAMES = [
@@ -130,6 +133,30 @@ export function getCafeMenu(date: Date): CafeMenu | null {
   const hot = CAFE_HOT[result.week][result.day];
   if (!hot) return null;
   return { dailyOptions: CAFE_DAILY, hotFood: hot };
+}
+
+// ---------------------------------------------------------------------------
+// Service overrides — date-keyed closures and altered hours
+// ---------------------------------------------------------------------------
+
+export interface ServiceOverride {
+  closedMeals?: ("lunch" | "brunch" | "dinner")[];
+  brunchTimes?: string;
+  lunchTimes?: string;
+  dinnerTimes?: string;
+}
+
+const SERVICE_OVERRIDES: Record<string, ServiceOverride> = {
+  "2026-04-29": { closedMeals: ["dinner"] },
+  "2026-05-01": { closedMeals: ["dinner"] },
+  "2026-05-02": { closedMeals: ["dinner"], brunchTimes: "10am – 12pm" },
+};
+
+export function getServiceOverride(date: Date): ServiceOverride | null {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return SERVICE_OVERRIDES[`${y}-${m}-${d}`] ?? null;
 }
 
 // ---------------------------------------------------------------------------

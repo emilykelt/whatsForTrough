@@ -2,93 +2,93 @@
   "week1": {
     "monday": {
       "lunch": {
-        "studentSpecial": "Beef steak and cheese fajitas",
-        "alternativeDish": "Sticky tahini and sweet chilli aubergines",
-        "allergenFriendly": "Yellow lentil and chickpea dhal"
+        "studentSpecial": "Honey and mustard glazed chicken wings",
+        "alternativeDish": "Broccoli and stilton quiche with dressed leaves",
+        "allergenFriendly": "Butternut squash and falafel quinoa with zhoug"
       },
       "dinner": {
-        "studentSpecial": "Whitebait with garlic aioli",
-        "alternativeDish": "Macaroni cheese with garlic focaccia",
-        "allergenFriendly": "",
-        "sides": ["Chips", "Roast fennel with black olives", "Braised rice", "Kale and sweet potato sauté"]
+        "studentSpecial": "Vegetable chili",
+        "alternativeDish": "Enchiladas verdes with sour cream and guacamole",
+        "allergenFriendly": "Re-fried bean taco with tomato salsa and salad",
+        "sides": ["Chips", "Rice", "Corn on the cob", "Seasonal greens", "New potatoes"]
       }
     },
     "tuesday": {
       "lunch": {
-        "studentSpecial": "Chicken and chorizo paella with garlic bread",
-        "alternativeDish": "Baked brie en croute",
-        "allergenFriendly": "Green chilli stew with beans"
+        "studentSpecial": "Beef burger with cheese and BBQ sauce",
+        "alternativeDish": "Halloumi fries with sweet chili sauce and salad",
+        "allergenFriendly": "Crispy polenta with cherry tomatoes and roasted courgettes"
       },
       "dinner": {
-        "studentSpecial": "Cajun fish burger",
-        "alternativeDish": "",
-        "allergenFriendly": "Chickpea tagine with preserved lemons",
-        "sides": ["Chips", "Dill new potato", "Cauliflower and butternut squash mash with sage", "Honey roasted beetroot"]
+        "studentSpecial": "Spring green rigatoni with bacon, lemon and chili",
+        "alternativeDish": "Loaded potato tots with pulled pork and cheese",
+        "allergenFriendly": "Gluten-free pasta bake with tomato and basil",
+        "sides": ["Chips", "Sweet potato", "Garlic parmentier", "Seasonal greens", "Carrots"]
       }
     },
     "wednesday": {
       "lunch": {
-        "studentSpecial": "Slow cooker plum and hoisin ribs",
-        "alternativeDish": "Moroccan spiced couscous burrito",
-        "allergenFriendly": "Mixed vegetable pakoras with mango chutney and pickle cabbage"
+        "studentSpecial": "Gochujang Korean drumsticks rice bowl",
+        "alternativeDish": "Sesame roasted squash with pak choi",
+        "allergenFriendly": "Vegetable glass noodle soba"
       },
       "dinner": {
-        "studentSpecial": "Sweet apple cottage pie",
-        "alternativeDish": "Sweet chilli stir-fry with rice noodles and kung pao cauliflower",
-        "allergenFriendly": "",
-        "sides": ["Chips", "Potato wedges", "Green beans", "Turmeric cauliflower", "Onion rings"]
+        "studentSpecial": "Smokey roast carrot burger with slaw",
+        "alternativeDish": "Tempeh meatballs with tomato and basil sauce",
+        "allergenFriendly": "Roasted portobello mushrooms with aubergines and tapenade",
+        "sides": ["Chips", "Rice", "Broccoli", "Green beans and peas", "Roasted cauliflower"]
       }
     },
     "thursday": {
       "lunch": {
-        "studentSpecial": "Spicy lamb and mint burger",
-        "alternativeDish": "Di capri ravioli with grilled vegetables",
-        "allergenFriendly": "Smoky vegetable jambalaya"
+        "studentSpecial": "Maple glazed crispy pork belly bites with apple and fennel slaw",
+        "alternativeDish": "Roasted beetroot wellington with vinaigrette",
+        "allergenFriendly": "Wild mushroom pilaf"
       },
       "dinner": {
-        "studentSpecial": "Honey, mustard pork chop",
-        "alternativeDish": "",
-        "allergenFriendly": "Mushrooms and green pepper stroganoff",
-        "sides": ["Chips", "Greens", "Hash browns", "Ratatouille", "Roast new potato"]
+        "studentSpecial": "Chana masala",
+        "alternativeDish": "Chicken tandoori with naan bread, onion salad and yoghurt",
+        "allergenFriendly": "Lentil dhal with spinach and potatoes",
+        "sides": ["Chips", "Herby diced potatoes/Bombay potatoes", "Rice", "Carrots", "Green beans"]
       }
     },
     "friday": {
       "lunch": {
-        "studentSpecial": "Egg fried rice with spring rolls",
-        "alternativeDish": "Squash and aubergine caponata with buffalo mozzarella",
+        "studentSpecial": "Pasta ala puttanesca",
+        "alternativeDish": "Jacket potato with toppings",
         "allergenFriendly": "Gluten-free battered fish with lemon"
       },
       "dinner": {
-        "studentSpecial": "Sticky sriracha and honey chicken drumsticks with Asian slaw",
-        "alternativeDish": "Vegetable gyozas with crispy chilli oil and spring onions",
-        "allergenFriendly": "",
-        "sides": ["Chips", "Sea salt roasted potatoes", "Mushy peas/fresh peas", "Fried Chinese leaves", "Gluten free pasta"]
+        "studentSpecial": "Hot dog with caramelised onions and pickles",
+        "alternativeDish": "Shakshouka",
+        "allergenFriendly": "Gluten-free and allergen-free lasagne",
+        "sides": ["Chips", "Steamed potatoes", "Mushy peas/fresh peas", "Seasonal greens", "Butterbeans"]
       }
     },
     "saturday": {
       "brunch": {
-        "studentSpecial": "Meatballs with roasted tomato sauce and pasta",
-        "alternativeDish": "Tempeh short ribs with mushrooms and udon noodles",
-        "allergenFriendly": ""
+        "studentSpecial": "Conchiglie with spinach, pine kernels and ricotta",
+        "alternativeDish": "Smokey pulled burger with apple sauce and crispy onions",
+        "allergenFriendly": "Buffalo cauliflower with ranch dressing"
       },
       "dinner": {
-        "studentSpecial": "Meatballs with roasted tomato sauce and pasta",
-        "alternativeDish": "Tempeh short ribs with mushrooms and udon noodles",
-        "allergenFriendly": "",
-        "sides": ["Chips", "Potato wedges", "Steamed broccoli", "Roast maple glazed carrots", "Rice"]
+        "studentSpecial": "Conchiglie with spinach, pine kernels and ricotta",
+        "alternativeDish": "Smokey pulled burger with apple sauce and crispy onions",
+        "allergenFriendly": "Buffalo cauliflower with ranch dressing",
+        "sides": ["Chips", "New potato salad", "Carrots", "Seasonal greens", "Mangetoute"]
       }
     },
     "sunday": {
       "brunch": {
-        "studentSpecial": "Herbs and lemon roast chicken",
-        "alternativeDish": "Chilli sin carne",
-        "allergenFriendly": ""
+        "studentSpecial": "Roasted Moroccan spiced halloumi with tabbouleh",
+        "alternativeDish": "Asian fishcake with Thai dipping sauce and crispy leaves",
+        "allergenFriendly": "Roasted Moroccan spiced aubergine with quinoa tabbouleh"
       },
       "dinner": {
-        "studentSpecial": "Herbs and lemon roast chicken",
-        "alternativeDish": "Chilli sin carne",
-        "allergenFriendly": "",
-        "sides": ["Chips", "Roast potato", "Jasmine rice", "Roast courgettes", "Sage squash"]
+        "studentSpecial": "Roasted Moroccan spiced halloumi with tabbouleh",
+        "alternativeDish": "Asian fishcake with Thai dipping sauce and crispy leaves",
+        "allergenFriendly": "Roasted Moroccan spiced aubergine with quinoa tabbouleh",
+        "sides": ["Chips", "New potatoes", "Jasmine rice", "Sweetcorn", "Cauliflower with pomegranate"]
       }
     }
   },

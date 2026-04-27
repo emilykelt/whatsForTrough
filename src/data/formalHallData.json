@@ -1,4 +1,44 @@
 {
+  "2026-04-28": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "vegDish": "Warm new season English asparagus",
+        "vegDescription": "New potato and pea salad"
+      },
+      {
+        "dish": "Roasted Norfolk chicken supreme with watercress pesto",
+        "description": "White bean and spring vegetable broth",
+        "vegDish": "Courgette and goats cheese fritters with watercress pesto",
+        "vegDescription": "White bean and spring vegetable broth"
+      },
+      {
+        "dish": "Lemon tart",
+        "description": "Crème fraîche and berries"
+      }
+    ]
+  },
+  "2026-05-03": {
+    "event": "Formal Hall & Choir",
+    "courses": [
+      {
+        "dish": "Roasted hake with crushed peas",
+        "description": "Herb velouté and pea shoots",
+        "vegDish": "Red pepper and quinoa cake with crushed peas",
+        "vegDescription": "Herb velouté and pea shoots"
+      },
+      {
+        "dish": "Crispy Lamb Hotchpotch",
+        "description": "Braised lamb shoulder with pearl barley, asparagus, peas, carrots and leeks",
+        "vegDish": "Vegetable and tofu curry",
+        "vegDescription": "Lemongrass and coriander infused rice"
+      },
+      {
+        "dish": "Chocolate brownie",
+        "description": "Homemade malt ice cream"
+      }
+    ]
+  },
   "2026-01-20": {
     "event": "Formal Hall",
     "courses": [

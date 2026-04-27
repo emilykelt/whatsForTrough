@@ -2,7 +2,7 @@
 export const dynamic = "force-dynamic";
 
 import Image from "next/image";
-import { getMenu, getAdjacentTermDate, getCafeMenu, getFormalHall, type MealService, type FormalHallMenu } from "@/lib/getMenu";
+import { getMenu, getAdjacentTermDate, getCafeMenu, getFormalHall, getServiceOverride, type MealService, type FormalHallMenu } from "@/lib/getMenu";
 import { DayScroller } from "./DayScroller";
 
 // ── helpers ─────────────────────────────────────────────────────────────────
@@ -65,6 +65,20 @@ function ExtrasBlock({ service }: { service: MealService }) {
         </div>
       )}
     </div>
+  );
+}
+
+function ClosedBlock({ title }: { title: string }) {
+  return (
+    <section>
+      <h2 className="font-display text-xl text-navy mb-0.5">{title}</h2>
+      <div
+        className="bg-white border-x border-b border-stone-200 px-4 py-4 shadow-sm"
+        style={{ borderTop: "3px solid #1c2d58" }}
+      >
+        <p className="text-[15px] text-stone-400 italic">Closed</p>
+      </div>
+    </section>
   );
 }
 
@@ -137,6 +151,13 @@ export default async function Home({
   // Sunday dinner is 5.30–6.30pm; every other day is 5.45–6.45pm.
   const dinnerTimes =
     selectedDate.getDay() === 0 ? "5.30pm – 6.30pm" : "5.45pm – 6.45pm";
+
+  // Service overrides (closures, altered hours) for this date.
+  const override = getServiceOverride(selectedDate);
+  const dinnerClosed = override?.closedMeals?.includes("dinner") ?? false;
+  const brunchClosed = override?.closedMeals?.includes("brunch") ?? false;
+  const lunchClosed = override?.closedMeals?.includes("lunch") ?? false;
+  const brunchTimes = override?.brunchTimes ?? "10am – 1.15pm";
 
   // Café '84 — weekdays only.
   const cafeMenu = getCafeMenu(selectedDate);
@@ -215,38 +236,51 @@ export default async function Home({
                   <h2 className="font-display text-xl text-navy mb-0.5">
                     Brunch
                   </h2>
-                  <p className="text-[11px] text-stone-400 font-sans mb-2">10am – 1.15pm</p>
+                  {!brunchClosed && (
+                    <p className="text-[11px] text-stone-400 font-sans mb-2">{brunchTimes}</p>
+                  )}
                   <div
                     className="bg-white border-x border-b border-stone-200 px-4 py-4 shadow-sm"
                     style={{ borderTop: "3px solid #1c2d58" }}
                   >
                     <p className="text-[15px] text-stone-400 italic">
-                      Standard brunch menu
+                      {brunchClosed ? "Closed" : "Standard brunch menu"}
                     </p>
                   </div>
                 </section>
-                <MealBlock
-                  title="Dinner"
-                  times={dinnerTimes}
-                  service={menuResult.menu.dinner}
-                  showExtras
-                />
+                {dinnerClosed ? (
+                  <ClosedBlock title="Dinner" />
+                ) : (
+                  <MealBlock
+                    title="Dinner"
+                    times={dinnerTimes}
+                    service={menuResult.menu.dinner}
+                    showExtras
+                  />
+                )}
               </>
             ) : (
               <>
-                {menuResult.menu.lunch && (
+                {menuResult.menu.lunch && !lunchClosed && (
                   <MealBlock
                     title="Lunch"
                     times="11.45am – 1.30pm"
                     service={menuResult.menu.lunch}
                   />
                 )}
-                <MealBlock
-                  title="Dinner"
-                  times={dinnerTimes}
-                  service={menuResult.menu.dinner}
-                  showExtras
-                />
+                {menuResult.menu.lunch && lunchClosed && (
+                  <ClosedBlock title="Lunch" />
+                )}
+                {dinnerClosed ? (
+                  <ClosedBlock title="Dinner" />
+                ) : (
+                  <MealBlock
+                    title="Dinner"
+                    times={dinnerTimes}
+                    service={menuResult.menu.dinner}
+                    showExtras
+                  />
+                )}
               </>
             )}
           </div>
