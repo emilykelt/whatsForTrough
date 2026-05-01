@@ -148,8 +148,8 @@ export interface ServiceOverride {
 
 const SERVICE_OVERRIDES: Record<string, ServiceOverride> = {
   "2026-04-29": { closedMeals: ["dinner"] },
-  "2026-05-01": { closedMeals: ["dinner"] },
   "2026-05-02": { closedMeals: ["dinner"], brunchTimes: "10am – 12pm" },
+  "2026-05-09": { brunchTimes: "10am – 12pm · Take away only" },
 };
 
 export function getServiceOverride(date: Date): ServiceOverride | null {
