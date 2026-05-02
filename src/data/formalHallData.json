@@ -39,6 +39,62 @@
       }
     ]
   },
+  "2026-05-04": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "vegDish": "Minestrone with basil pesto"
+      },
+      {
+        "dish": "Garlic and thyme marinated chicken fillet",
+        "description": "Vegetable and herb couscous, broccoli and lemon yoghurt",
+        "vegDish": "Aubergine and mozzarella croquettes",
+        "vegDescription": "Roasted mediterranean vegetables, garlic aioli and crisp rocket"
+      },
+      {
+        "dish": "Baked vanilla cheesecake",
+        "description": "Raspberry gel and compote"
+      }
+    ]
+  },
+  "2026-05-05": {
+    "event": "BAME Dinner",
+    "courses": [
+      {
+        "vegDish": "Italian cannellini bean and tomato salad"
+      },
+      {
+        "dish": "Porchetta with salsa verde",
+        "description": "New potatoes, green beans and glazed carrots",
+        "vegDish": "Breadcrumb, parmesan and oregano stuffed Portobello mushroom",
+        "vegDescription": "Braised white beans with spinach, fine beans"
+      },
+      {
+        "dish": "Tiramisu"
+      }
+    ]
+  },
+  "2026-05-10": {
+    "event": "Formal Hall and Choir Dinner",
+    "courses": [
+      {
+        "dish": "Roasted sea trout",
+        "description": "Samphire, fine beans, peas, lemon and cream",
+        "vegDish": "Roasted cauliflower, chickpea and red onion salad",
+        "vegDescription": "Tahini dressing, toasted seeds and rocket leaves"
+      },
+      {
+        "dish": "Herb roasted chicken with gravy",
+        "description": "Roast potatoes and seasonal vegetables",
+        "vegDish": "Lentil curry with cumin roasted aubergine",
+        "vegDescription": "Lime yoghurt and naan"
+      },
+      {
+        "dish": "Banana toffee steamed sponge",
+        "description": "Crème fraîche"
+      }
+    ]
+  },
   "2026-01-20": {
     "event": "Formal Hall",
     "courses": [
