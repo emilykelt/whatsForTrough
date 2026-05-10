@@ -21,6 +21,7 @@ const TERM_WEEKS: { week: 1 | 2 | 3; start: Date }[] = [
   { week: 1, start: new Date(2026, 3, 13) }, // 13 Apr (Mon)
   { week: 1, start: new Date(2026, 3, 27) }, // 27 Apr (Mon) — Easter term
   { week: 2, start: new Date(2026, 4,  4) }, //  4 May (Mon)
+  { week: 3, start: new Date(2026, 4, 11) }, // 11 May (Mon)
   { week: 1, start: new Date(2026, 4, 18) }, // 18 May (Mon)
   { week: 2, start: new Date(2026, 4, 25) }, // 25 May (Mon)
   { week: 1, start: new Date(2026, 5,  8) }, //  8 Jun (Mon)

@@ -95,6 +95,107 @@
       }
     ]
   },
+  "2026-05-11": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "vegDish": "Grilled courgette, lentil and feta salad",
+        "vegDescription": "Rocket, toasted seeds, chili flakes, lemon and olive oil"
+      },
+      {
+        "dish": "Jerk pork steak",
+        "description": "Caribbean beans, broccoli and pineapple salsa",
+        "vegDish": "Smoky Spanish style vegan \"meatballs\"",
+        "vegDescription": "New potatoes, fine beans and parsley"
+      },
+      {
+        "dish": "Passion fruit tart",
+        "description": "Lime meringue"
+      }
+    ]
+  },
+  "2026-05-12": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "vegDish": "Red Thai butternut squash soup",
+        "vegDescription": "Coconut milk, coriander and chili oil"
+      },
+      {
+        "dish": "Roasted chicken fillet with red wine sauce",
+        "description": "Mash potato, cauliflower purée and caramelised shallot",
+        "vegDish": "Crispy potato gnocchi with summer squash",
+        "vegDescription": "Red onions, basil roasted red pepper pesto and toasted seeds"
+      },
+      {
+        "dish": "Spiced banana caramel cake",
+        "description": "Toasted pine kernels, vanilla and cinnamon syrup"
+      }
+    ]
+  },
+  "2026-05-14": {
+    "event": "Pembroke Players Dinner",
+    "courses": [
+      {
+        "dish": "Country terrine",
+        "description": "Cornichons, mustard mayonnaise and ciabatta croute",
+        "vegDish": "Salad of fennel, orange and kohlrabi",
+        "vegDescription": "Rocket, seeds and olive oil"
+      },
+      {
+        "dish": "Roasted chalk stream trout with Romesco sauce",
+        "description": "New potatoes and Mediterranean vegetables",
+        "vegDish": "Polenta with red onions, mushrooms, herbs and feta",
+        "vegDescription": "Spinach, pine kernels and lemon"
+      },
+      {
+        "dish": "Lemon tart",
+        "description": "Raspberries and cream"
+      }
+    ]
+  },
+  "2026-05-15": {
+    "event": "BA's Dinner",
+    "courses": [
+      {
+        "dish": "Citrus and parsley cured sea trout",
+        "description": "Beetroot chutney, horseradish yoghurt and micro herbs",
+        "vegDish": "Roasted spiced crunchy butterbeans",
+        "vegDescription": "Cauliflower and onion over creamy harissa tahini yoghurt, pomegranate and sesame seeds"
+      },
+      {
+        "dish": "Sweet and sticky braised pork neck",
+        "description": "Steamed rice and Chinese greens",
+        "vegDish": "Caramelized red onion and thyme tart with Mayfield cheddar crackle",
+        "vegDescription": "Warm new potato salad and purple sprouting broccoli"
+      },
+      {
+        "dish": "Meringue with vanilla cream",
+        "description": "Mango, passion fruit and pineapple"
+      }
+    ]
+  },
+  "2026-05-17": {
+    "event": "Formal Hall and Choir",
+    "courses": [
+      {
+        "dish": "Fried haddock goujons",
+        "description": "Tartrate sauce, lemon and mixed leaves",
+        "vegDish": "Spring vegetables and bean soup",
+        "vegDescription": "Fresh herbs and olive oil"
+      },
+      {
+        "dish": "Twice cooked pork belly with roasted apple sauce",
+        "description": "Mash potato and cabbage",
+        "vegDish": "Aubergine stuffed with white beans and vegetables",
+        "vegDescription": "Mash potato, cabbage and roasted tomato sauce"
+      },
+      {
+        "dish": "Steamed strawberry jam pudding",
+        "description": "Vanilla custard"
+      }
+    ]
+  },
   "2026-01-20": {
     "event": "Formal Hall",
     "courses": [
