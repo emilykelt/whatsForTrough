@@ -211,6 +211,14 @@ export default async function Home({
       </div>
 
       <div className="px-4 py-6 pb-10 max-w-lg mx-auto">
+        {/* ── Accuracy notice (expires 2026-06-03) ───────────────── */}
+        {now < new Date(2026, 5, 4) && (
+          <div className="mb-5 bg-amber-50 border border-amber-200 px-4 py-3 text-[13px] text-amber-900 font-sans shadow-sm">
+            <span className="font-semibold">Note:</span> College have not been
+            sticking to the menu recently, so it may not be accurate.
+          </div>
+        )}
+
         {/* ── No menu ─────────────────────────────────────────────── */}
         {!menuResult && (
           <div
@@ -380,6 +388,13 @@ export default async function Home({
           </section>
         </div>
       )}
+
+      {/* ── Exams message ──────────────────────────────────────────── */}
+      <div className="px-4 pb-8 max-w-lg mx-auto text-center">
+        <p className="font-display text-3xl text-navy">
+          Good Luck with Exams!
+        </p>
+      </div>
 
       {/* ── Footer ──────────────────────────────────────────────────── */}
       <footer className="pb-8 text-center text-[11px] text-stone-400 font-sans space-y-1">
