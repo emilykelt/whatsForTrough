@@ -196,6 +196,107 @@
       }
     ]
   },
+  "2026-05-31": {
+    "event": "Formal Hall and Choir",
+    "courses": [
+      {
+        "dish": "Mediterranean fish soup",
+        "description": "Saffron croute",
+        "vegDish": "Miso corn chowder",
+        "vegDescription": "Parsley and croutons"
+      },
+      {
+        "dish": "Harissa slow-cooked lamb shoulder",
+        "description": "Herby polenta, kale and pomegranate seeds",
+        "vegDish": "Black eyed pea fritters",
+        "vegDescription": "Herbed polenta, kale and pomegranate seeds"
+      },
+      {
+        "dish": "Stem ginger cheesecake",
+        "description": "Plum compote"
+      }
+    ]
+  },
+  "2026-06-01": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "dish": "Pressed ham hock terrine",
+        "description": "Gribiche sauce, mixed leaf and pork crackling",
+        "vegDish": "Salad of heritage tomatoes, shallots and olives",
+        "vegDescription": "Ciabatta croutons, crispy capers, feta and olive oil"
+      },
+      {
+        "dish": "Grilled chicken fillet with basil pesto",
+        "description": "Crushed new potatoes and roasted Mediterranean vegetables",
+        "vegDish": "Penne pasta with spinach, cream cheese",
+        "vegDescription": "Spring onions, leeks and parmesan"
+      },
+      {
+        "dish": "Vanilla crème brûlée",
+        "description": "Homemade shortbread biscuit"
+      }
+    ]
+  },
+  "2026-06-02": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "vegDish": "Heritage beetroots with labneh, pickled blackberries",
+        "vegDescription": "Seed granola, peas shoots, parsley and orange vinaigrette"
+      },
+      {
+        "dish": "Grilled chalk stream trout with a white wine sauce",
+        "description": "Toasted fregola, peas, samphire and crispy olive oil",
+        "vegDish": "Courgette and goats cheese fritters with watercress pesto",
+        "vegDescription": "New potatoes and seasonal salad"
+      },
+      {
+        "dish": "Lemon tart with toasted meringue",
+        "description": "Bee pollen pine kernel crumble and raspberry gel"
+      }
+    ]
+  },
+  "2026-06-05": {
+    "event": "BA's Dinner",
+    "courses": [
+      {
+        "dish": "Roasted chalk stream trout",
+        "description": "Chana masala and coriander",
+        "vegDish": "Panzanella salad"
+      },
+      {
+        "dish": "Chicken Milanese",
+        "description": "Crispy potatoes, rocket and lemon",
+        "vegDish": "Aubergine Milanese",
+        "vegDescription": "Crispy potatoes, rocket and lemon"
+      },
+      {
+        "dish": "Tiramisu"
+      }
+    ]
+  },
+  "2026-06-07": {
+    "event": "Formal Hall and Choir",
+    "courses": [
+      {
+        "dish": "Haddock and spring onion fishcake",
+        "description": "Mixed leaves, tartare sauce and lemon",
+        "vegDish": "Sweet potato cakes",
+        "vegDescription": "Mixed leaves and mango chutney"
+      },
+      {
+        "dish": "Honey and mustard glazed pork loin with apple jus",
+        "description": "Roasted sweet potato, bacon and savoy cabbage",
+        "vegDish": "Sauté gnocchi with tomato pesto",
+        "vegDescription": "Roasted Mediterranean vegetables"
+      },
+      {
+        "dish": "Lemon and vanilla loaf cake",
+        "description": "Clotted cream and raspberries"
+      }
+    ]
+  },
   "2026-01-20": {
     "event": "Formal Hall",
     "courses": [
