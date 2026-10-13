@@ -2,31 +2,21 @@ import menuData from "@/data/menuData.json";
 import formalHallData from "@/data/formalHallData.json";
 
 // ---------------------------------------------------------------------------
-// Term week schedule — Lent 2026
+// Term week schedule — Michaelmas 2026
 // Each entry maps a Mon-Sun window to its rotation week number (1, 2, or 3).
-// Note: the spec lists Week 3 as commencing "15 Mar" but 15 Mar 2026 is a
-// Sunday; 16 Mar (the Monday of that week) is used to keep weeks Mon-aligned.
+// Source: https://www.pem.cam.ac.uk/college/catering/information-students/servery-menu
 // ---------------------------------------------------------------------------
 const TERM_WEEKS: { week: 1 | 2 | 3; start: Date }[] = [
-  { week: 1, start: new Date(2026, 0, 19) }, // 19 Jan (Mon)
-  { week: 2, start: new Date(2026, 0, 26) }, // 26 Jan (Mon)
-  { week: 3, start: new Date(2026, 1,  2) }, //  2 Feb (Mon)
-  { week: 1, start: new Date(2026, 1,  9) }, //  9 Feb (Mon)
-  { week: 2, start: new Date(2026, 1, 16) }, // 16 Feb (Mon)
-  { week: 3, start: new Date(2026, 1, 23) }, // 23 Feb (Mon)
-  { week: 1, start: new Date(2026, 2,  2) }, //  2 Mar (Mon)
-  { week: 2, start: new Date(2026, 2,  9) }, //  9 Mar (Mon)
-  { week: 3, start: new Date(2026, 2, 16) }, // 16 Mar (Mon)
-  { week: 3, start: new Date(2026, 3,  6) }, //  6 Apr (Mon)
-  { week: 1, start: new Date(2026, 3, 13) }, // 13 Apr (Mon)
-  { week: 1, start: new Date(2026, 3, 27) }, // 27 Apr (Mon) — Easter term
-  { week: 2, start: new Date(2026, 4,  4) }, //  4 May (Mon)
-  { week: 3, start: new Date(2026, 4, 11) }, // 11 May (Mon)
-  { week: 1, start: new Date(2026, 4, 18) }, // 18 May (Mon)
-  { week: 2, start: new Date(2026, 4, 25) }, // 25 May (Mon)
-  { week: 3, start: new Date(2026, 5,  1) }, //  1 Jun (Mon)
-  { week: 1, start: new Date(2026, 5,  8) }, //  8 Jun (Mon)
-  { week: 2, start: new Date(2026, 5, 15) }, // 15 Jun (Mon)
+  // ── Michaelmas 2026 ──
+  { week: 1, start: new Date(2026, 9,  5) }, //  5 Oct (Mon)
+  { week: 2, start: new Date(2026, 9, 12) }, // 12 Oct (Mon)
+  { week: 3, start: new Date(2026, 9, 19) }, // 19 Oct (Mon)
+  { week: 1, start: new Date(2026, 9, 26) }, // 26 Oct (Mon)
+  { week: 2, start: new Date(2026, 10, 2) }, //  2 Nov (Mon)
+  { week: 3, start: new Date(2026, 10, 9) }, //  9 Nov (Mon)
+  { week: 1, start: new Date(2026, 10, 16) }, // 16 Nov (Mon)
+  { week: 2, start: new Date(2026, 10, 23) }, // 23 Nov (Mon)
+  { week: 3, start: new Date(2026, 10, 30) }, // 30 Nov (Mon)
 ];
 
 const DAY_NAMES = [

@@ -389,13 +389,6 @@ export default async function Home({
         </div>
       )}
 
-      {/* ── Exams message ──────────────────────────────────────────── */}
-      <div className="px-4 pb-8 max-w-lg mx-auto text-center">
-        <p className="font-display text-3xl text-navy">
-          Good Luck with Exams!
-        </p>
-      </div>
-
       {/* ── Footer ──────────────────────────────────────────────────── */}
       <footer className="pb-8 text-center text-[11px] text-stone-400 font-sans space-y-1">
         <p>

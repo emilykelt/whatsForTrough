@@ -776,5 +776,68 @@
         "description": "Chocolate sauce and berry compote"
       }
     ]
+  },
+  "2026-10-11": {
+    "event": "Formal Hall & Choir",
+    "courses": [
+      {
+        "dish": "Roasted chalk stream trout",
+        "description": "Spiced chickpeas, pea shoots and cumin oil",
+        "vegDish": "Cumin and paprika spiced roasted peppers and onions",
+        "vegDescription": "Hummus, dukkah and coriander"
+      },
+      {
+        "dish": "Roasted short loin of pork with roasted apple sauce",
+        "description": "Mash potato, savoy cabbage and honey glazed carrot",
+        "vegDish": "Filled eggplant with vegetables and beans",
+        "vegDescription": "Mash potato, savoy cabbage and honey glazed carrot"
+      },
+      {
+        "dish": "Date and apple cake",
+        "description": "Toffee sauce"
+      }
+    ]
+  },
+  "2026-10-13": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "dish": "Asian pork belly bites",
+        "description": "Chinese leaves and sesame seeds",
+        "vegDish": "Maple BBQ glazed tempeh",
+        "vegDescription": "Chinese leaves and sesame seeds"
+      },
+      {
+        "dish": "Miso marinated chalk stream trout",
+        "description": "Crushed new potatoes, carrot and ginger purée, steamed greens and red chili oil",
+        "vegDish": "Vegan Kung Pao tofu",
+        "vegDescription": "Steamed rice"
+      },
+      {
+        "dish": "Sticky ginger cake",
+        "description": "Glazed pineapple and caramel sauce"
+      }
+    ]
+  },
+  "2026-10-18": {
+    "event": "Formal Hall & Choir",
+    "courses": [
+      {
+        "dish": "Calamari and tomato stew",
+        "description": "Olive oil and fresh parsley",
+        "vegDish": "Carrot and cumin soup",
+        "vegDescription": "Topped with tahini and seeds"
+      },
+      {
+        "dish": "Thyme and garlic marinated chicken breast",
+        "description": "Parmentier potatoes, broccoli and sweetcorn and roasted red pepper salsa",
+        "vegDish": "Vegan lentil patty with creamy mushroom gravy",
+        "vegDescription": "Parmentier potatoes and broccoli"
+      },
+      {
+        "dish": "Apple and cinnamon crumble",
+        "description": "Vanilla custard"
+      }
+    ]
   }
 }
