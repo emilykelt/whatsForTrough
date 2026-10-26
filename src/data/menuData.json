@@ -286,141 +286,141 @@
   "week3": {
     "monday": {
       "lunch": {
-        "studentSpecial": "Spinach, ricotta, red onion and pesto gnocchi",
-        "alternativeDish": "Chicken shish kebab, pickled red cabbage, garlic mayo and pitta",
-        "allergenFriendly": "Aubergine stuffed with caponata and wild puffed rice"
+        "studentSpecial": "Paneer jalfrezi with poppadom",
+        "alternativeDish": "Fish pie with cheddar mash",
+        "allergenFriendly": "Roasted squash and chickpea casserole"
       },
       "dinner": {
-        "studentSpecial": "Lentil bolognaise",
-        "alternativeDish": "BBQ brisket bao buns",
-        "allergenFriendly": "Loaded potato tots, spicy beans, jalapenos, cream cheese and vegan cheese",
-        "pudding": "",
+        "studentSpecial": "Chicken and vegetable fried rice",
+        "alternativeDish": "Halloumi fries with chili jam and crispy rocket",
+        "allergenFriendly": "Aubergine, butterbean and charred courgette katsu curry",
+        "pudding": "Baked brown sugar rice pudding",
         "sides": [
-          "Paprika chips",
-          "Steamed rice",
-          "New potatoes",
-          "Spring cabbage",
-          "Cauliflower"
+          "Chips",
+          "Mangetout",
+          "Vegetable medley",
+          "Rice",
+          "Sweet potato wedges"
         ]
       }
     },
     "tuesday": {
       "lunch": {
-        "studentSpecial": "Teriyaki tofu stir fry with don noodles",
-        "alternativeDish": "Beef lasagne",
-        "allergenFriendly": "Vegetable fritter with mango chutney and salad"
+        "studentSpecial": "Roasted chicken thighs with creamy lentils and pancetta",
+        "alternativeDish": "Broccoli, pea and stilton pasta crumble bake",
+        "allergenFriendly": "Vegetable casserole topped with crispy mushrooms"
       },
       "dinner": {
-        "studentSpecial": "Chicken and chorizo jambalaya",
-        "alternativeDish": "Peri peri halloumi burger with onion rings and rocket",
-        "allergenFriendly": "Cauliflower and apricot tagine",
-        "pudding": "",
+        "studentSpecial": "BBQ pulled jackfruit with mixed bean salad and guacamole",
+        "alternativeDish": "Chicken tikka masala with naan",
+        "allergenFriendly": "Vegan biryani",
+        "pudding": "Sticky toffee pudding with cream",
         "sides": [
           "Chips",
-          "Puy lentils with vegetables and herbs",
-          "Sautéed potatoes",
-          "Roasted Mediterranean vegetables",
-          "Steamed leeks"
+          "Minted peas",
+          "Green beans",
+          "Chickpea braised rice",
+          "Roasted new potatoes"
         ]
       }
     },
     "wednesday": {
       "lunch": {
-        "studentSpecial": "Roasted fennel, sundried tomato and olive penne pasta",
-        "alternativeDish": "Mexican style chilli meaty pork ribs with smoky corn and avocado salsa",
-        "allergenFriendly": "Sweet potato and coconut polenta, pak choi, mangetout and sweet chilli"
+        "studentSpecial": "Steamed haddock with creamed leeks and kale",
+        "alternativeDish": "Spinach falafel burger with tzatziki and chili jam",
+        "allergenFriendly": "Aubergine caponata"
       },
       "dinner": {
-        "studentSpecial": "BBQ bean and jackfruit kebab, saffron aioli, coriander slaw and pomegranate",
-        "alternativeDish": "Fish pie topped with mash potato",
-        "allergenFriendly": "Chickpea, kale and green bean masala",
-        "pudding": "",
+        "studentSpecial": "Chicken leg with green beans, cherry tomatoes and pesto",
+        "alternativeDish": "Crispy chili and miso aubergine with egg noodles",
+        "allergenFriendly": "Roasted squash with tabbouleh style salsa and coconut yoghurt",
+        "pudding": "Choc chip bread and butter pudding with crème anglaise",
         "sides": [
           "Chips",
-          "Brown rice",
-          "Herby new potatoes",
-          "Fine beans with chilli and garlic",
-          "Broccoli"
+          "Spiced cauliflower",
+          "Winter greens",
+          "Onion fried rice",
+          "Potato wedges"
         ]
       }
     },
     "thursday": {
       "lunch": {
-        "studentSpecial": "Mixed pepper tortilla, tomato, artichoke and watercress salad",
-        "alternativeDish": "Smoked tofu and kimchi rice bowl",
-        "allergenFriendly": "Sriracha glazed chicken wings with Asian slaw"
+        "studentSpecial": "Leek, potato, cheddar and onion puff pastry open pie",
+        "alternativeDish": "Beef strips, mushrooms and spinach with green peppercorn sauce",
+        "allergenFriendly": "Moroccan vegetable tagine"
       },
       "dinner": {
-        "studentSpecial": "Harissa roasted aubergine and courgette with tahini yoghurt and flat bread",
-        "alternativeDish": "Sweet potato, spinach, and pine nut sausage roll",
-        "allergenFriendly": "Sweetcorn and courgette fritters, tomato and bean salad and coconut yoghurt",
-        "pudding": "",
+        "studentSpecial": "Potato pancakes with feta and guacamole",
+        "alternativeDish": "Five bean and mushroom bolognese with pasta",
+        "allergenFriendly": "Squash and sage risotto with pumpkin seeds",
+        "pudding": "Treacle sponge with custard",
         "sides": [
           "Chips",
-          "Patatas bravas",
-          "Vegetable quinoa / steamed rice",
-          "Grilled courgettes",
-          "Ratatouille"
+          "Seasonal root veg",
+          "Corn on the cob",
+          "Crushed sweet potato",
+          "Roasted new potatoes"
         ]
       }
     },
     "friday": {
       "lunch": {
-        "studentSpecial": "Broccoli and blue cheese quiche",
-        "alternativeDish": "Vegetable lasagne",
-        "allergenFriendly": "Gluten-free battered fish with lemon"
+        "studentSpecial": "Four cheese pasta bake with parsley crumb",
+        "alternativeDish": "Wet polenta with roasted Mediterranean veg and onion chutney",
+        "allergenFriendly": "Gluten-free battered fish"
       },
       "dinner": {
-        "studentSpecial": "Truffle mac 'n' cheese with a parsley crumb",
-        "alternativeDish": "Katsu chicken burger",
-        "allergenFriendly": "Butternut squash, vegetable and white bean curry",
-        "pudding": "",
+        "studentSpecial": "Butter chicken",
+        "alternativeDish": "Roast pepper, basil and blue cheese frittata with tomato salsa",
+        "allergenFriendly": "Jacket potato with mixed bean chili",
+        "pudding": "Orange and chocolate sponge with chocolate sauce",
         "sides": [
           "Chips",
-          "Potato wedges",
-          "Vegetable rice",
           "Mushy peas / peas",
-          "Glazed carrots"
+          "Stir-fried broccoli",
+          "Crispy potato wedges",
+          "Braised onion rice"
         ]
       }
     },
     "saturday": {
       "brunch": {
-        "studentSpecial": "Spiced minced beef chilli with corn chips, guacamole, and sour cream",
-        "alternativeDish": "Tempeh fajita, avocado and mint yoghurt wrap",
-        "allergenFriendly": "Smoky chipotle jackfruit tostadas"
+        "studentSpecial": "Baked coley with tomato and olive sauce",
+        "alternativeDish": "Gnocchi with mushrooms and leeks",
+        "allergenFriendly": "Lentil and Mediterranean veg ragu"
       },
       "dinner": {
-        "studentSpecial": "Spiced minced beef chilli with corn chips, guacamole, and sour cream",
-        "alternativeDish": "Tempeh fajita, avocado and mint yoghurt wrap",
-        "allergenFriendly": "Smoky chipotle jackfruit tostadas",
-        "pudding": "",
+        "studentSpecial": "Baked coley with tomato and olive sauce",
+        "alternativeDish": "Gnocchi with mushrooms and leeks",
+        "allergenFriendly": "Lentil and Mediterranean veg ragu",
+        "pudding": "Jam roly-poly",
         "sides": [
           "Chips",
-          "Rice",
-          "Spiced potato wedges",
-          "Corn on the cob",
-          "Broccoli"
+          "Green beans and cherry tomatoes",
+          "Peas",
+          "Garlic mash potato",
+          "Steamed new potatoes"
         ]
       }
     },
     "sunday": {
       "brunch": {
         "studentSpecial": "Roast pork loin with apple sauce",
-        "alternativeDish": "Celeriac schnitzel with beans and sauce vierge",
-        "allergenFriendly": "Tarka dahl and chickpea pancake"
+        "alternativeDish": "Vegetable curry",
+        "allergenFriendly": "Vegan chili nachos"
       },
       "dinner": {
         "studentSpecial": "Roast pork loin with apple sauce",
-        "alternativeDish": "Celeriac schnitzel with beans and sauce vierge",
-        "allergenFriendly": "Tarka dahl and chickpea pancake",
-        "pudding": "",
+        "alternativeDish": "Vegetable curry",
+        "allergenFriendly": "Vegan chili nachos",
+        "pudding": "Apple upside down cake with toffee sauce",
         "sides": [
           "Chips",
-          "Roasted new potatoes",
-          "Vegetable quinoa",
-          "Carrots and peas",
-          "Green cabbage"
+          "Maple glazed carrots",
+          "Cabbage",
+          "Rice",
+          "Rosemary roast potatoes"
         ]
       }
     }
