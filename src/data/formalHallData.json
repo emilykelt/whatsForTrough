@@ -839,5 +839,186 @@
         "description": "Vanilla custard"
       }
     ]
+  },
+  "2026-10-19": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "dish": "Curried carrot and red lentil soup",
+        "description": "Roasted seeds and coconut milk"
+      },
+      {
+        "dish": "House-rubbed pork neck with giant cous cous and broccoli",
+        "description": "Preserved lemon and honey gastrique and toasted pumpkin seeds",
+        "vegDish": "Vegetable and white bean tagine",
+        "vegDescription": "Giant vegetable cous cous and broccoli, Toasted pumpkin seeds and coriander yoghurt"
+      },
+      {
+        "dish": "Callebaut chocolate mousse",
+        "description": "Oranges, raspberries and ginger nut biscuit crumb"
+      }
+    ]
+  },
+  "2026-10-20": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "dish": "Roasted chalk stream trout fillet",
+        "description": "Puy lentil, carrot and pomegranate finished with spiced yoghurt",
+        "vegDish": "Warm quinoa, chickpea and harissa roasted butternut squash salad",
+        "vegDescription": "Feta cheese, seeds and rocket"
+      },
+      {
+        "dish": "Twice cooked rolled beef shin with red wine sauce",
+        "description": "Mashed potato, cauliflower puree and fine beans",
+        "vegDish": "Winter vegetable and bean ragout",
+        "vegDescription": "Mash potato, herby dumpling and fine beans"
+      },
+      {
+        "dish": "Lemon tart with toasted meringue",
+        "description": "Bee pollen, pine kernel crumble and raspberry gel"
+      }
+    ]
+  },
+  "2026-10-25": {
+    "event": "Formal Hall & Choir",
+    "courses": [
+      {
+        "dish": "Steamed haddock with a Thai green curry sauce",
+        "description": "Stir-fried vegetables and coriander",
+        "vegDish": "Quinoa, vegetable and herb cakes with a Thai green curry sauce",
+        "vegDescription": "Stir-fried vegetables and coriander"
+      },
+      {
+        "dish": "Roast leg of lamb with redcurrant gravy",
+        "description": "Roast potatoes, carrots and peas",
+        "vegDish": "Roast lentil and Cheddar Wellington with redcurrant gravy",
+        "vegDescription": "Roast potatoes, carrots and peas"
+      },
+      {
+        "dish": "Treacle sponge",
+        "description": "Vanilla bean custard"
+      }
+    ]
+  },
+  "2026-10-26": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "vegDish": "Thai red butternut squash soup",
+        "vegDescription": "Coconut milk, coriander and chili oil"
+      },
+      {
+        "dish": "Roasted chicken fillet with gravy",
+        "description": "Mash potato, cauliflower puree, fine beans and roasted carrot",
+        "vegDish": "Crispy potato gnocchi with winter vegetables",
+        "vegDescription": "Red onions, basil, roasted red pepper pesto and toasted seeds"
+      },
+      {
+        "dish": "Meringue with bay infused custard",
+        "description": "Spiced orange and winter fruit"
+      }
+    ]
+  },
+  "2026-10-27": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "dish": "Braised pork cheek",
+        "description": "Roasted apple sauce, puffed pork crackling and jus",
+        "vegDish": "Roasted sweet potato and quinoa salad",
+        "vegDescription": "Crunchy seed granola, feta, rocket and mustard"
+      },
+      {
+        "dish": "Tandoori coley fillet",
+        "description": "Fluffy rice, steamed greens, lime wedge and coriander",
+        "vegDish": "Vegetable and smoked tofu massaman curry",
+        "vegDescription": "Fluffy rice, steamed greens, lime wedge and coriander"
+      },
+      {
+        "dish": "Vanilla panna cotta",
+        "description": "Cardamon and ginger spiced poached fruit"
+      }
+    ]
+  },
+  "2026-11-01": {
+    "event": "Formal Hall & Choir",
+    "courses": [
+      {
+        "dish": "Roasted Hampshire chalk stream trout fillet",
+        "description": "Butternut squash and cumin purée, chickpeas, coriander and pea shoots",
+        "vegDish": "Onion seed and breadcrumb tempeh",
+        "vegDescription": "Butternut squash and cumin purée, chickpeas, coriander and pea shoots"
+      },
+      {
+        "dish": "Thyme and honey roasted quartered chicken",
+        "description": "Roast potatoes, cabbage and gravy",
+        "vegDish": "Olive polenta",
+        "vegDescription": "Vegetable gratin and salsa verde"
+      },
+      {
+        "dish": "Warm chocolate brownie",
+        "description": "Chocolate sauce and mascarpone ice cream"
+      }
+    ]
+  },
+  "2026-11-02": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "dish": "Smoked haddock, white beans and butter sauce",
+        "vegDish": "Courgette and harissa fritters",
+        "vegDescription": "Mint yoghurt and rocket"
+      },
+      {
+        "dish": "Twice cooked pork belly",
+        "description": "Fondant potato, sauteed greens and cider gravy",
+        "vegDish": "Bean and vegetable filled eggplant topped with herb breadcrumb",
+        "vegDescription": "Fondant potato, sauteed greens and roasted tomato sauce"
+      },
+      {
+        "dish": "Callebaut chocolate and orange brownie",
+        "description": "Vanilla ice cream and chocolate sauce"
+      }
+    ]
+  },
+  "2026-11-03": {
+    "event": "Formal Hall",
+    "courses": [
+      {
+        "vegDish": "Leek, mustard and gruyere tart",
+        "vegDescription": "Dressed leaves and herb oil"
+      },
+      {
+        "dish": "Braised short ribs of beef with soy and honey jus",
+        "description": "Mash potato, braised onion and fine beans",
+        "vegDish": "Braised celeriac steak with white beans, leeks, carrots, peas and herbs",
+        "vegDescription": "Fine beans and crispy onions"
+      },
+      {
+        "dish": "Sticky toffee pudding",
+        "description": "Butterscotch sauce and clotted cream"
+      }
+    ]
+  },
+  "2026-11-08": {
+    "event": "Diwali Formal Hall & Choir",
+    "courses": [
+      {
+        "dish": "Hariyali chalk stream trout",
+        "description": "Kachumber salad",
+        "vegDish": "Aloo tikka",
+        "vegDescription": "Chana masala chat"
+      },
+      {
+        "dish": "Chicken chettinad",
+        "description": "Cumin rice, tandoori broccoli and mini naan bread",
+        "vegDish": "Dhal makhani",
+        "vegDescription": "Cumin rice, tandoori broccoli and mini naan bread"
+      },
+      {
+        "dish": "Mango mousse"
+      }
+    ]
   }
 }
